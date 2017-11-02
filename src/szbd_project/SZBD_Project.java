@@ -12,7 +12,7 @@ import java.sql.*;
 public class SZBD_Project {
     public final static String USERNAME = "user45";
     public final static String PASSWORD = "huhu4";
-    public final static String URL = "jdbc:mysql://localhost:3306/testdb";
+    public final static String URL = "jdbc:mysql://localhost:3306/project";
     /**
      * @param args the command line arguments
      * @throws java.lang.ClassNotFoundException
@@ -25,7 +25,7 @@ public class SZBD_Project {
         System.out.println("Polaczono");
         Statement stmt = conn.createStatement();
         ResultSet rs;
-        rs = stmt.executeQuery("select DISTINCT * from first");
+        /*rs = stmt.executeQuery("select DISTINCT * from first");
         while(rs.next())
         {
             System.out.println(rs.getInt(1));
@@ -36,7 +36,7 @@ public class SZBD_Project {
            stmt.executeUpdate("INSERT INTO first VALUES (" + new Integer(i).toString() + ")");
         }*/
         
-        rs.close();
+        //rs.close();
         stmt.close();
         conn.close();
     }
